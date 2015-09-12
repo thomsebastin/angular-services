@@ -5,16 +5,18 @@
 	<link rel="stylesheet" type="text/css" href="all.css">
 </head>
 <body>
-	<div class="container">
+	<div ng-app="myApp" class="container">
         <div>
-            <div ng-controller="CalculatorController">
+            <div ng-controller="CalculatorController as vm">
                 Enter a number:
-                <input type="number" ng-model="number">
-                <button  ng-click="findSquare()">Square</button>
-                <div>{{answer}}</div>
+                <input type="number" ng-model="vm.number">
+                <button  ng-click="vm.findSquare()">Square</button>
+                <div>{{vm.answer}}</div>
             </div>
         </div>
     </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
+    <script type="text/javascript" src="calcService.js"></script>
+    <script type="text/javascript" src="calcController.js"></script>
 </body>
 </html>

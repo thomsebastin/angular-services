@@ -1,9 +1,9 @@
 angular.module('myApp', ['CalculatorService'])
-	   .controller('CalculatorController', Square)
+	   .controller('CalculatorController', CalculatorController)
 
-function Square (Calculator) {
+function CalculatorController (Calculator) {
 	var vm = this;
 	vm.findSquare = function () {
-		vm.answer = Calculator.square(vm.number);
+		vm.answer = Calculator.toSquare(vm.number);
 	};
 }
